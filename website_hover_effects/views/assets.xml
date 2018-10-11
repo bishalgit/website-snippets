@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="o_hover_animate_assets_frontend_js" inherit_id="website.assets_frontend">
+        <xpath expr="//link[last()]" position="after">
+            <!-- Mixins -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/_options.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/_mixins.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/_hacks.scss"/>
+            
+        <!-- 2d-transitions -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_grow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_shrink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_pulse.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_pulse-grow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_pulse-shrink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_push.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_pop.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_bounce-in.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_bounce-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_rotate.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_grow-rotate.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_float.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_sink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_bob.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_hang.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_skew.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_skew-forward.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_skew-backward.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-vertical.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-horizontal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-to-bottom-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-to-top-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-top.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-bottom.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_wobble-skew.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_buzz.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_buzz-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_forward.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/2d-transitions/_backward.scss"/>
+        <!-- End -->
+        
+        <!-- Background Transitions -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_fade.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_back-pulse.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_sweep-to-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_sweep-to-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_sweep-to-bottom.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_sweep-to-top.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_bounce-to-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_bounce-to-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_bounce-to-bottom.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_bounce-to-top.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_radial-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_radial-in.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_rectangle-in.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_rectangle-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_shutter-in-horizontal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_shutter-out-horizontal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_shutter-in-vertical.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/background-transitions/_shutter-out-vertical.scss"/>
+        <!--End  -->
+            
+        <!-- Icons -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-back.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-forward.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-down.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-up.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-spin.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-drop.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-fade.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-float-away.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-sink-away.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-grow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-shrink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-pulse.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-pulse-grow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-pulse-shrink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-push.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-pop.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-bounce.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-rotate.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-grow-rotate.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-float.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-sink.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-bob.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-hang.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-wobble-horizontal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-wobble-vertical.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-buzz.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/icons/_icon-buzz-out.scss"/>
+        <!-- End -->
+
+        <!-- Border Transitions -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_border-fade.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_hollow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_trim.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_ripple-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_ripple-in.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_outline-out.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_outline-in.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_round-corners.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_underline-from-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_underline-from-center.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_underline-from-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_reveal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_underline-reveal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_overline-reveal.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_overline-from-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_overline-from-center.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/border-transitions/_overline-from-right.scss"/>
+        <!-- End -->
+
+        <!-- Shadow and Glow Transitions -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_shadow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_grow-shadow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_float-shadow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_glow.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_shadow-radial.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_box-shadow-outset.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/shadow-and-glow-transitions/_box-shadow-inset.scss"/>
+        <!-- End -->
+
+        <!-- Speech Bubbles -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-top.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-bottom.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-float-top.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-float-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-float-bottom.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/speech-bubbles/_bubble-float-left.scss"/>
+        <!-- End -->
+
+        <!-- Curls -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/curls/_curl-top-left.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/curls/_curl-top-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/curls/_curl-bottom-right.scss"/>
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/effects/curls/_curl-bottom-left.scss"/>
+        <!-- End -->
+        
+        <!-- hover scss -->
+            <link rel="stylesheet" type="text/scss" href="/website_hover_effects/static/src/scss/hover.scss"/>
+        <!-- End -->
+        </xpath>
+        <!-- <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/website_animate/static/src/js/o_animate.frontend.js"/>
+        </xpath> -->
+    </template>
+
+    <!-- <template id="o_animate_assets_editor" inherit_id="website.assets_editor">
+        <xpath expr="//link[last()]" position="after">
+            <link rel="stylesheet" type="text/scss" href="/website_animate/static/src/scss/o_animate_editor.scss"/>
+        </xpath>
+        <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript" src="/website_animate/static/src/js/o_animate.editor.js"/>
+        </xpath>
+    </template> -->
+</odoo>

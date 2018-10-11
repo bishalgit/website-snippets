@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- Snippets menu -->
+<template id="o_hover_animate_options" inherit_id="website.snippet_options">
+    <xpath expr="." position="inside">
+        <t t-set="o_animate_elements" t-value="['div', 'a', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'img', '.btn', '.fa']"/>
+        <t t-set="o_animate_selector" t-value="', '.join(o_animate_elements)"/>
+        <div t-att-data-selector="o_animate_selector"
+            data-exclude=".o_not-animable">
+            <div class="dropdown-submenu o_anim_li">
+                <a href="#" class="dropdown-item"><i class="fa fa-bolt"/>Hover Effects</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" data-select-class="">Disable animation</a>
+                    <div class="dropdown-divider"/>
+                    <div class="dropdown-submenu o_anim_entrance-fading_li">
+                        <a href="#" class="dropdown-item">2D Transitions</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-grow">Grow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-shrink">Shrink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-pulse">Pulse</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-pulse-grow">Pulse Grow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-pulse-shrink">Pulse Shrink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-push">Push</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-pop">Pop</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bounce-in">Bounce In</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bounce-out">Bounce Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-rotate">Rotate</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-grow-rotate">Grow Rotate</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-float">Float</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-sink">Sink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bob">Bob</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-hang">Hang</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-skew">Skew</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-skew-forward">Skew Forward</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-skew-backward">Skew Backward</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-vertical">Wobble Horizontal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-horizontal">Wobble Vertical</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-to-bottom-right">Wobble To Bottom Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-to-top-right">Wobble To Top Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-top">Wobble Top</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-bottom">Wobble Bottom</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-wobble-skew">Wobble Skew</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-buzz">Buzz</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-buzz-out">Buzz Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-forward">Forward</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-backward">Backward</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_entrance-bounce_li">
+                        <a href="#" class="dropdown-item">Background Transitions</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-fade">Fade</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-back-pulse">Back Pulse</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-sweep-to-right">Sweep To Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-sweep-to-left">Sweep To Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-sweep-to-bottom">Sweep To Bottom</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-sweep-to-top">Sweep To Top</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-bounce-to-right">Bounce To Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-bounce-to-left">Bounce To Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-bounce-to-bottom">Bounce To Bottom</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-bounce-to-top">Bounce To Top</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-radial-out">Radial Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-radial-in">Radial In</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-rectangle-in">Rectangle In</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-rectangle-out">Rectangle Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-shutter-in-horizontal">Shutter In Horizontal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-shutter-out-horizontal">Shutter Out Horizontal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-shutter-in-vertical">Shutter In Vertical</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-shutter-out-vertical">Shutter Out Vertical</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_entrance-rotate_li">
+                        <a href="#" class="dropdown-item">Icons</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-back">Icon Back</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-forward">Icon Forward</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-down">Icon Down</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-up">Icon Up</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-spin">Icon Spin</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-drop">Icon Drop</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-fade">Icon Fade</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-float-away">Icon Float Away</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-sink-away">Icon Sink Away</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-grow">Icon Grow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-shrink">Icon Shrink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-pulse-grow">Icon Pulse Grow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-pulse-shrink">Icon Pulse Shrink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-push">Icon Push</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-pop">Icon Pop</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-bounce">Icon Bounce</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-rotate">Icon Rotate</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-grow-rotate">Icon Grow Rotate</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-float">Icon Float</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-sink">Icon Sink</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-bob">Icon Bob</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-hang">Icon Hang</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-wobble-horizontal">Icon Wobble Horizontal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-wobble-vertical">Icon Wobble Vertical</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-buzz">Icon Buzz</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-icon-buzz-out">Icon Buzz Out</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_entrance-rotate_li">
+                        <a href="#" class="dropdown-item">Border Transitions</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-border-fade">Border Fade</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-hollow">Hollow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-trim">Trim</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-ripple-out">Ripple Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-ripple-in">Ripple In</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-outline-out">Outline Out</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-outline-in">Outline In</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-round-corners">Round Corners</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-underline-from-left">Underline From Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-underline-from-right">Underline From Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-reveal">Reveal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-underline-reveal">Underline Reveal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-overline-reveal">Overline Reveal</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-overline-from-left">Overline From Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-overline-from-center">Overline From Center</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-overline-from-right">Overline From Right</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_effects-attention_li">
+                        <a href="#" class="dropdown-item">Shadow and Glow Transitions</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-shadow">Shadow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-grow-shadow">Grow Shadow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-float-shadow">Float Shadow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-glow">Glow</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-shadow-radial">Shadow Radial</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-box-shadow-outset">Box Shadow Outset</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-box-shadow-inset">Box Shadow Inset</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_effects-flippers_li">
+                        <a href="#" class="dropdown-item">Speech Bubbles</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-top">Bubble Top</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-right">Bubble Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-bottom">Bubble Bottom</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-left">Bubble Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-float-top">Bubble Float Top</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-float-right">Bubble Float Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-float-bottom">Bubble Float Bottom</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-bubble-float-left">Bubble Float Left</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu o_anim_effects-flippers_li">
+                        <a href="#" class="dropdown-item">Curls</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-curl-top-left">Curl Top Left</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-curl-top-right">Curl Top Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-curl-bottom-right">Curl Bottom Right</a>
+                            <a href="#" class="dropdown-item" data-select-class="o-hvr-curl-bottom-left">Curl Bottom Left</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </xpath>
+</template>
+</odoo>
