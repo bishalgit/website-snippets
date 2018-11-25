@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <template id="tnt_snippets_assets_frontend" name="tnt_snippets Portal Assets" inherit_id="web.assets_frontend">
+			<xpath expr="//link[last()]" position="after">
+				<link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/less/fonts.less" />
+				<link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/less/wrapwrap.less" />
+				<link rel="stylesheet" type="text/css" href="/tnt_snippets/static/src/css/aos.css" />
+				<link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/css/owl.carousel.min.css" />
+        <link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/css/magnific-popup.css" />
+        <link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/css/travel-style.css" />
+			</xpath>
+			<xpath expr="//script[last()]" position="after">
+				<script src="tnt_snippets/static/src/js/aos.js" />
+				<script src="tnt_snippets/static/src/js/owl.carousel.js" />
+        <script src="tnt_snippets/static/src/js/jquery.magnific-popup.min.js" />
+        <script src="tnt_snippets/static/src/js/gallery.js" />
+        <script src="tnt_snippets/static/src/js/all-snippets.js"/>
+			</xpath>
+		</template>
+  </data>
+</odoo>

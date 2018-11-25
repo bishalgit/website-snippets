@@ -1,0 +1,168 @@
+<odoo>
+	<data>
+		<template id="tnt_snippets_less_helpers" name="tnt_snippets less helpers" inherit_id="web.less_helpers" priority="15">
+			<xpath expr="//link[last()]" position="after">
+				<link rel="stylesheet" type="text/less" href="/tnt_snippets/static/src/less/variable.less" />
+			</xpath>
+		</template>
+		
+		<!-- <template id="custom_footer_default" inherit_id="website.footer_default" customize_show="True" name="Automatic Footer">
+			<xpath expr="//div[@id='footer']" position="replace">
+				<div class="footer__graphic">
+				</div>
+				<div class="footer" id="footer">
+					<div class="container">
+						<div class="footer_top">
+							<div class="row">
+								<div class="col-md-3">
+									<h3>
+										SITE MAP
+									</h3>
+									<ul>
+										<li>
+											<a href="#">
+												Home
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Destinations
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Gallary
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Blogs
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												About Us
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Contact Us
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-3">
+									<h3>
+										LINKS
+									</h3>
+									<ul>
+										<li>
+											<a href="#">
+												Top Tour
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												New Travel
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												How to
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Tips and Tricks
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Best Tour
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Top Travel
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-3">
+									<h3>
+										POPULAR tnt_snippets
+									</h3>
+									<ul>
+										<li>
+											<a href="#">
+												Mustang
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Langtang
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Everest Basecamp
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Mardi Himal
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Manaslu
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												Annapurna Basecamp
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-3 ">
+									<h3>
+										OPENING HOURS
+									</h3>
+									<ul>
+										<li>
+											SUN-THU : 10am - 5pm
+										</li>
+										<li>
+											Friday: 10am-2pm
+										</li>
+										<li>
+											Saturday: Closed
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="bottom_footer text-center">
+							<p class="copyright">
+								Â© 2018 Tour Our Nepal .
+							</p>
+						</div>
+					</div>
+				</div>
+			</xpath>
+		</template>
+		<template id="tnt_snippets_layout_footer_copyright" inherit_id="website.layout_footer_copyright" name="Footer Copyright">
+			<xpath expr="//div[@class='container mt16 mb8']" position="replace">
+			</xpath>
+		</template> -->
+		<template id="my_s_banner" inherit_id="website.s_banner" name="Slider Arrow">
+			<xpath expr="//div[@class='carousel-control left hidden']" position="replace">
+				<div class="carousel-control left hidden" data-target="#myCarousel" data-slide="prev" style="width: 10%"><i class="fa fa-angle-left"></i></div>
+			</xpath>
+            <xpath expr="//div[@class='carousel-control right hidden']" position="replace">
+				<div class="carousel-control right hidden" data-target="#myCarousel" data-slide="prev" style="width: 10%"><i class="fa fa-angle-right"></i></div>
+			</xpath>
+		</template>
+	</data>
+</odoo>

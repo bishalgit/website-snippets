@@ -1,0 +1,46 @@
+
+
+.s_google_map {
+    max-width: 1140px;
+    margin: 0 auto;
+  
+  
+
+  .description{
+    display: none;
+    .s_google_map-desc-hook(); //.description backdoor
+
+    font {
+      float: left;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      .s_google_map-desc-p-hook(); //.description p backdoor
+    }
+
+    span{
+      float: left;
+      text-transform: none;
+      font-weight: normal;
+      margin-top: 6px;
+      margin-left: 10px;
+      .s_google_map-desc-span-hook(); //.description span backdoor
+    }
+  }
+
+  &:hover .description{
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+#mapModal {
+  z-index: 3000;
+}
+
+.pac-container { // google map autosuggestion
+  z-index: 3001;
+  &:after {
+    display:none;
+  }
+}
